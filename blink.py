@@ -1,5 +1,6 @@
 """my cool lights"""
 
+import random
 import RPi.GPIO as GPIO
 import time as t
 
@@ -39,5 +40,7 @@ patterns = [chase,updown]
 
 
 if __name__ == "__main__":
+    choices = [slowon(),chase(),updown(),slowoff()]
     while True:
-        updown(2)
+        random.choice(choices)
+
